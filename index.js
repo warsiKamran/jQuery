@@ -36,3 +36,31 @@ $(document).keypress(function(event){
 $(document).on("keypress", function(event){
     $("h1").text(event.key);
 });
+
+
+//animations
+$("button").on("click", function(){
+    $("h1").toggle();
+});
+
+$("button").on("click", function(){
+    $("h1").fadeToggle();
+});
+
+$("button").on("click", function(){
+    $("h1").slideToggle();
+});
+
+$("button").on("click", function(){
+    $("h1").animate({margin: 200});         //takes only attributes which accepts numeric values
+});
+
+$("button").on("click", function(){
+    $("h1").animate({opacity: 0.5});         //takes only attributes which accepts numeric values
+});
+
+
+//chaining the animations
+$("button").on("click", function(){
+    $("h1").slideUp().slideDown().animate({margin:200});         //takes only attributes which accepts numeric values
+});
