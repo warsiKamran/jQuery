@@ -1,22 +1,22 @@
 // selecting elements
-// $("h1").addClass("big-heading");
-// $("h1").removeClass("big-heading");
-// $("button");
+$("h1").addClass("big-heading");
+$("h1").removeClass("big-heading");
+$("button");
 
 
-//adding multiple classes
-// $("h1").addClass("big-heading margin-50");
-// $("button").addClass("button-style");
+// adding multiple classes
+$("h1").addClass("big-heading margin-50");
+$("button").addClass("button-style");
 
 
-//manipulating text
-// $("h1").text("bye");
-// $("button").text("Don't click me");
-// $("button").html("<em>click me</em>");
+// manipulating text
+$("h1").text("bye");
+$("button").text("Don't click me");
+$("button").html("<em>click me</em>");
 
 
-//manipulating attributes
-// $("a").attr("href", "https://www.facebook.com");
+// manipulating attributes
+$("a").attr("href", "https://www.facebook.com");
 
 
 //adding event listeners
@@ -29,5 +29,10 @@ $("button").click(function(){
 });
 
 $(document).keypress(function(event){
+    $("h1").text(event.key);
+});
+
+//another way of initialising event listeners
+$(document).on("keypress", function(event){
     $("h1").text(event.key);
 });
